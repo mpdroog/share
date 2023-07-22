@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="rootdev.nl">
+    <title>Share</title>
+    <link href="/assets/bootstrap.css" rel="stylesheet">
+    <link href="/assets/app.css" rel="stylesheet">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Share form</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<div id="passForm"><form class="was-validated">
+  <h1>Unlock-form</h1>
+
+  <div class="form-floating mb-3">
+    <input id="js-mp" class="form-control" required="required" minlength="10" maxlength="50" type="password" placeholder="Master password">
+    <label for="js-mp">Master password</label>
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary">Login</button>
+</form></div>
+
+<div class="d-none row row-cols-1 row-cols-md-2 g-4" id="js-rows">
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">New entry</h5>
+    <textarea id="js-plain" class="bigtext"></textarea>
+    <a href="#" id="js-encrypt" class="btn btn-primary">Encrypt</a>
+  </div>
+</div>
+</div>
+</div>
+
+<script id="js-rows-html">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text d-none">{{body}}</p>
+    <a href="#" class="js-toggle btn btn-primary">Show</a>
+  </div>
+</div>
+</script>
+<script type="text/javascript" src="/assets/crypto-js-4.1.1/crypto-js.js"></script>
+<script type="text/javascript" src="/assets/crypto-js-4.1.1/aes.js"></script>
+<script type="text/javascript" src="/app.js"></script>
+  </body>
+</html>
