@@ -55,6 +55,11 @@ $login.children[0].addEventListener("submit", function(e) {
   .then(response => response.json())
   .then(function(data) {
     data.forEach(function(line) {
+      if (line.file === "README.md") {
+        document.getElementById("js-alert").innerText = line.content;
+        return;
+      }
+
       var next = html;
       next = next.replaceAll("{{title}}", line.file);
 
